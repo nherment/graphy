@@ -1,0 +1,25 @@
+{
+  "name": "graphy",
+  "version": "0.1.0",
+  "description": "Graph decision tree",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/nherment/graphy.git"
+  },
+  "keywords": [
+    "graph",
+    "decision"
+  ],
+  "author": "",
+  "license": "MIT License",
+  "bugs": {
+    "url": "https://github.com/nherment/graphy/issues"
+  },
+  "dependencies": {
+    "underscore": "~1.5.2"
+  }
+}
