@@ -1,0 +1,101 @@
+{
+  "questions": {
+    "situationGroup": {
+      "text": "Please report your situation",
+      "type": "choice",
+      "answers": {
+        "1": "self",
+        "2": "group",
+        "3": "on behalf"
+      }
+    },
+    "situationGroupQuantity": {
+      "text": "How many are you",
+      "type": "number"
+    },
+    "situationSafety": {
+      "text": "Please report your situation",
+      "type": "choice",
+      "answers": {
+        "1": "safe",
+        "2": "unsafe",
+        "3": "unsure"
+      }
+    },
+    "injury": {
+      "text": "Please report your situation",
+      "type": "choice",
+      "answers": {
+        "1": "none",
+        "2": "minor",
+        "3": "major"
+      }
+    },
+    "name": {
+      "text": "What is your name ?",
+      "type": "choice",
+      "answers": {
+        "9": "not provided"
+      }
+    },
+    "materialDamage": {
+      "text": "Do you have any major material damage to report in your surroundings ?",
+      "type": "choice",
+      "answers": {
+        "1": "yes",
+        "2": "no"
+      }
+    },
+    "materialDamageDescription": {
+      "text": "Please describe the damage",
+      "type": "text"
+    },
+    "location": {
+      "text": "Please give us your address or describe where you are",
+      "type": "location"
+    },
+    "end": {
+      "text": "Thank you.",
+      "type": "text"
+    }
+  },
+  "threads": {
+    "situation": {
+      "question": "situationGroup",
+      "answer": {
+        "*": {
+          "question": "situationSafety"
+        }
+      }
+    },
+    "injury": {
+      "question": "injury",
+      "answer": {
+        "*": {
+          "question": "location"
+        }
+      }
+    },
+    "material": {
+      "question": "materialDamage",
+      "answer": {
+        "1": {
+          "question": "materialDamageDescription"
+        }
+      }
+    },
+    "help": {
+      "thread": "situation",
+      "next": {
+        "thread": "injury",
+        "next": {
+          "thread": "materialDamage",
+          "next": {
+            "thread": "end"
+          }
+        }
+      }
+    }
+  },
+  "main": ["help"]
+}

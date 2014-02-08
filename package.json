@@ -1,8 +1,8 @@
 {
   "name": "graphy",
   "version": "0.1.0",
-  "description": "Graph decision tree",
-  "main": "index.js",
+  "description": "Graph decision flow",
+  "main": "lib/Graphy.js",
   "scripts": {
     "test": "mocha"
   },
